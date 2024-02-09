@@ -54,15 +54,6 @@ class TestATMController(unittest.TestCase):
         logging.info(f"출금 후 잔액: {final_balance}")
         self.assertEqual(final_balance, self.initial_balance - withdrawal_amount)
 
-    def test_withdraw_failure(self):
-        logging.info("테스트 시작: 출금 테스트 (실패 케이스: 잔액 부족)")
-        self.atm_controller.insert_card_and_enter_pin(self.account_number, self.pin)
-        try:
-            self.atm_controller.withdraw(self.initial_balance + 500)  # 잔액 초과 금액 출금 시도
-        except ValueError as e:
-            logging.info(f"예상된 예외 발생: {e}")
-        else:
-            self.fail("잔액 부족 예외가 발생하지 않았습니다.")
 
     def test_withdraw_failure_due_to_insufficient_funds(self):
         logging.info("테스트 시작: 출금 실패 테스트 - 잔액 부족")

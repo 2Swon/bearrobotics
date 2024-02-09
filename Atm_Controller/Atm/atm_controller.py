@@ -6,7 +6,7 @@ class ATMController:
         self.current_account = None
 
     def insert_card_and_enter_pin(self, account_number, pin):
-        """카드를 삽입하고 PIN 번호를 입력하여 계좌 접근을 시도합니다."""
+        #카드를 삽입하고 PIN 번호를 입력하여 계좌 접근을 시도합니다.
         if self.bank_system.verify_pin(account_number, pin):
             self.current_account = account_number
             return True
