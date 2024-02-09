@@ -19,3 +19,14 @@ ATMController 클래스는 실제 ATM 컨트롤러의 동작을 모델링하며,
 * 입금 테스트: 올바른 인증 후 사용자 계좌에 금액을 입금하는 시나리오를 테스트합니다.
 * 출금 테스트 (성공 케이스): 충분한 잔액이 있는 상태에서 출금을 시도하는 시나리오를 테스트합니다.
 * 출금 실패 테스트 - 잔액 부족: 출금하려는 금액이 계좌 잔액을 초과하는 경우를 테스트하여, 예외 처리가 올바르게 작동하는지 검증합니다.
+
+
+## test 방법
+
+```python
+git clone https://github.com/2Swon/bearrobotics.git
+
+cd Atm_Controller
+
+python test.py
+```
