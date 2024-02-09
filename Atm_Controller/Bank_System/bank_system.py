@@ -2,6 +2,7 @@ class BankSystem:
     def __init__(self):
         self.accounts = {}
 
+    #계좌 추가
     def add_account(self, account_number, pin, balance):
         if account_number in self.accounts:
             return False

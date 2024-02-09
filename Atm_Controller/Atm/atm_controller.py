@@ -1,6 +1,8 @@
 from Bank_System.bank_system import BankSystem
 
 class ATMController:
+
+    #Bank system 사용
     def __init__(self, bank_system: BankSystem):
         self.bank_system = bank_system
         self.current_account = None
